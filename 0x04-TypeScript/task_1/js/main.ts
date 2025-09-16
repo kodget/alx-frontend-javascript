@@ -29,22 +29,19 @@ const director: Director = {
   numberOfReports: 17
 }
 
-interface PrintTeacherFunction {
-  firstName: string;
-  lastName: string;
-}
-function printTeacher({firstName, lastName}: PrintTeacherFunction): void {
-  const editedFirstName = firstName.slice(0, 1);
-  console.log(`My first initial is ${editedFirstName} and my last name is ${lastName}`)
-}
-printTeacher({firstName: "Muhammad", lastName: "Ajuwon"});
-console.log(teacher);
-console.log(director);
+// function printTeacher(firstName: string, lastName: string) {
+//   const editedFirstName = firstName.slice(0, 1);
+//   const newString: string = `My first initial is ${editedFirstName} and my last name is ${lastName}`
+//   return newString;
+// }
+// printTeacher();
 
-// should print
-// Object
-// contract: false
-// firstName: "John"
-// fullTimeEmployee: false
-// lastName: "Doe"
-// location: "London"
+interface printTeacherFunction {
+  (firstName: string, lastName: string) : string;
+}
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  const editedFirstName = firstName.slice(0, 1);
+  const newString: string = `My first initial is ${editedFirstName} and my last name is ${lastName}`
+  return newString;
+}
+printTeacher("Muhammad", "Ajuwon");

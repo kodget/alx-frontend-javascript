@@ -29,13 +29,6 @@ const director: Director = {
   numberOfReports: 17
 }
 
-// function printTeacher(firstName: string, lastName: string) {
-//   const editedFirstName = firstName.slice(0, 1);
-//   const newString: string = `My first initial is ${editedFirstName} and my last name is ${lastName}`
-//   return newString;
-// }
-// printTeacher();
-
 interface printTeacherFunction {
   (firstName: string, lastName: string) : string;
 }
@@ -45,3 +38,30 @@ const printTeacher: printTeacherFunction = (firstName, lastName) => {
   
 }
 printTeacher("Muhammad", "Ajuwon");
+
+interface StudentConstructor {
+  firstName: string;
+  lastName: string;
+  workFromHome(): string;
+  displayName(): string;
+}
+
+class StudentClass implements StudentConstructor {
+  
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    
+  }
+  // workOnHomework method returns string "currently working"
+  workFromHome(): string {
+    return "currently working"
+  }
+  //  displayName method returns first name
+   displayName(): string {
+    return this.firstName
+   }
+}

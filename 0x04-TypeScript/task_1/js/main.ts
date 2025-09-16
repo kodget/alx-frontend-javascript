@@ -37,12 +37,11 @@ const director: Director = {
 // printTeacher();
 
 interface printTeacherFunction {
-  firstName: string;
-  lastName: string;
+  (firstName: string, lastName: string) : string;
 }
-const printTeacher = ({firstName, lastName}: printTeacherFunction): string => {
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
   firstName = firstName.slice(0,1);
   return `${firstName}. ${lastName}`
   
 }
-printTeacher({firstName: "Muhammad", lastName: "Ajuwon"});
+printTeacher("Muhammad", "Ajuwon");

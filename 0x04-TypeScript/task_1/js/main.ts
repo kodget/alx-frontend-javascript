@@ -58,7 +58,7 @@ class StudentClass implements StudentConstructor {
   }
   // workOnHomework method returns string "currently working"
   workOnHomework(): string {
-    return "currently working"
+    return "Currently working"
   }
   //  displayName method returns first name
    displayName(): string {

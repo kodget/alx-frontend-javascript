@@ -1,20 +1,23 @@
 interface Teacher  {
-    firstName: string;
+    readonly firstName: string;
+    readonly lastName: string ;
     fullTimeEmployee: boolean;
-    lastName: string;
+    yearsOfExperience?: number;
     location: string;
     contract: boolean;
+    [key: string] : any;
 }
 
-const teacher3: Teacher = {
+const teacher: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
+  yearsOfExperience: 2,
   lastName: 'Doe',
   location: 'London',
   contract: false,
 };
 
-console.log(teacher3);
+console.log(teacher);
 
 // should print
 // Object

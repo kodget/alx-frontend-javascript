@@ -29,6 +29,15 @@ const director: Director = {
   numberOfReports: 17
 }
 
+interface PrintTeacherFunction {
+  firstName: string;
+  lastName: string;
+}
+function printTeacher({firstName, lastName}: PrintTeacherFunction): void {
+  const editedFirstName = firstName.slice(0, 1);
+  console.log(`My first initial is ${editedFirstName} and my last name is ${lastName}`)
+}
+printTeacher({firstName: "Muhammad", lastName: "Ajuwon"});
 console.log(teacher);
 console.log(director);
 

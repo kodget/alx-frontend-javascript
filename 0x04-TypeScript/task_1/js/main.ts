@@ -40,8 +40,8 @@ interface printTeacherFunction {
   (firstName: string, lastName: string) : string;
 }
 const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  const editedFirstName = firstName.slice(0, 1);
-  return `My first initial is ${editedFirstName} and my last name is ${lastName}`
+  return `My first initial is ${firstName.slice(0,1)} and my last name is ${lastName}`
   
 }
+console.log(printTeacher("Muhammad", "Ajuwon"));
 printTeacher("Muhammad", "Ajuwon");

@@ -42,7 +42,7 @@ printTeacher("Muhammad", "Ajuwon");
 interface StudentConstructor {
   firstName: string;
   lastName: string;
-  workFromHome(): string;
+  workOnHomework(): string;
   displayName(): string;
 }
 
@@ -57,7 +57,7 @@ class StudentClass implements StudentConstructor {
     
   }
   // workOnHomework method returns string "currently working"
-  workFromHome(): string {
+  workOnHomework(): string {
     return "currently working"
   }
   //  displayName method returns first name

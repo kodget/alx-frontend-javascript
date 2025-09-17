@@ -4,7 +4,7 @@ namespace Subjects {
   export interface Teacher {
     firstName: string;
     lastName: string;
-    experienceTeachingC: number;
+    experienceTeachingC?: number;
   }
 
   export class Cpp extends Subject {

@@ -1,3 +1,5 @@
+// Interface
+
 interface DirectorInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
@@ -9,6 +11,8 @@ interface TeacherInterface {
   getCoffeeBreak(): string;
   workTeacherTasks(): string;
 }
+
+// Classes
 
 class Director implements DirectorInterface {
   workFromHome(): string {
@@ -34,6 +38,8 @@ class Teacher implements TeacherInterface {
   }
 }
 
+// Functions
+
 const createEmployee = (salary: string | number) => {
   if (typeof salary === "number") {
     if (salary < 500) {
@@ -54,3 +60,16 @@ const executeWork = (employee: Director | Teacher) => {
     return employee.workTeacherTasks();
   }
 };
+
+// Types
+
+type Subjects = "Math" | "History";
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
+teachClass("Math");

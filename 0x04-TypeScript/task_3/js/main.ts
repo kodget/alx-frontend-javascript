@@ -15,6 +15,6 @@ let rowID: RowID = 125;
 
 const newRowID: RowID = CRUD.insertRow(row);
 row.age = 23;
-const updatedRow: RowID = CRUD.updateRow(rowID, row);
-CRUD.updateRow(newRowID, row);
+const updatedRow: RowElement = CRUD.updateRow(rowID, row);
+CRUD.updateRow(newRowID, updatedRow);
 CRUD.deleteRow(newRowID);

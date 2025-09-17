@@ -7,7 +7,7 @@
 import { RowElement, RowID } from "./interface";
 import * as CRUD from "./crud";
 
-let row: RowElement = {
+const row: RowElement = {
   firstName: "Guillaume",
   lastName: "Salve",
 };

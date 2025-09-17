@@ -1,4 +1,4 @@
-/// <reference path="./teacher.ts" />
+/// <reference path="./Subject.ts" />
 namespace Subjects {
   export interface Teacher {
     firstName: string;

@@ -3,7 +3,7 @@ namespace Subjects {
   export interface Teacher {
     experienceTeachingJava?: number;
   }
-  export class React implements Teacher {
+  export class Java extends Subject {
     firstName: string;
     lastName: string;
     experienceTeachingC: number;

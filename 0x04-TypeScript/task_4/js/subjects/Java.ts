@@ -15,8 +15,8 @@ namespace Subjects {
     }
     getAvailableTeacher(): string {
       if (
-        this.experienceTeachingReact === undefined ||
-        this.experienceTeachingReact === null
+        this.experienceTeachingJava === undefined ||
+        this.experienceTeachingJava === null
       ) {
         return "No available teacher";
       } else {
